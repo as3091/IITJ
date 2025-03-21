@@ -4,10 +4,10 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 AI/AI_Assign_1/cache
-AI/AI_Assign_1/india-master
-AI/AI_Assign_1/shapefiles-master
-AI/AI_Assign_1/*.csv
-AI/AI_Assign_1/*.zip
+AI/AI_Assign_1/Q2/india-master
+AI/AI_Assign_1/Q2/shapefiles-master
+AI/AI_Assign_1/Q2/*.csv
+AI/AI_Assign_1/Q2/*.zip
 
 ML/Assign_1/*.csv
 ML/Assign_2/*.csv
