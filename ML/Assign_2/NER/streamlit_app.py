@@ -60,6 +60,7 @@ def string_to_dataframe(input_string):
         sentence = input_string
         prediction_df = NN_obj.predict(model=NN_obj.model,sentence=sentence)
         st.write("Prediction DataFrame:")
+        st.write(prediction_df)
         st.dataframe(prediction_df)
         return prediction_df
 
