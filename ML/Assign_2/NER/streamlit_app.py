@@ -71,8 +71,8 @@ def string_to_dataframe(input_string):
 
 st.title("String to DataFrame Converter")
 
-input_string = st.text_area("Enter your string (e.g., CSV format):", 
-                           value="col1,col2\n1,a\n2,b\n3,c", 
+input_string = st.text_area("Enter your string :", 
+                           value="Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality", 
                            height=200)  # Example CSV string
 
 if st.button("Convert to DataFrame"):
