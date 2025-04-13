@@ -73,7 +73,7 @@ input_string = st.text_area("Enter your string :",
 
 p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
-pwd = out.decode()
+pwd = out.decode().strip()
 st.write(f"pwd {pwd}", out.decode())
 
 cmd = f"ls -ltrh {pwd}/ML/Assign_2/NER/*"
