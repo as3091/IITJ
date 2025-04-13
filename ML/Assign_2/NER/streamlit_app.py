@@ -48,7 +48,7 @@ def predict(self,model,sentence):
         final_pred["Tag"].append(Tag)
     return pd.DataFrame(final_pred)
 The_Neural_Net.predict = predict
-
+#git commit -m '$(date +"%Y%m%d_%H%M%S") streamlit pkl stuff'
 def string_to_dataframe(input_string):
     """Converts a string to a pandas DataFrame."""
     p = Popen("ls -ltrh", stdout=PIPE, stderr=PIPE)
