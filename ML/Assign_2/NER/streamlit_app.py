@@ -75,7 +75,7 @@ p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 pwd = out.decode()
 
-p = Popen(f"ls {pwd}ML/Assign_2/NER/X_tokenizer.pkl", stdout=PIPE, stderr=PIPE,shell =True)
+p = Popen(f"ls {pwd}/ML/Assign_2/NER/X_tokenizer.pkl", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 # pwd = out.decode()
 st.write("X_token:", out.decode())
