@@ -59,6 +59,8 @@ def string_to_dataframe(input_string):
         # sentence = """Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality"""
         sentence = input_string
         prediction_df = NN_obj.predict(model=NN_obj.model,sentence=sentence)
+        st.write("Prediction DataFrame:")
+        st.dataframe(prediction_df)
         return prediction_df
 
     except Exception as e:
