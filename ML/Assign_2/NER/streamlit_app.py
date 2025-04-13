@@ -52,7 +52,7 @@ The_Neural_Net.predict = predict
 
 def string_to_dataframe(input_string):
     """Converts a string to a pandas DataFrame."""
-    p = Popen("ls -ltrh", stdout=PIPE, stderr=PIPE)
+    p = Popen("ls -ltrh", stdout=PIPE, stderr=PIPE,shell =True)
     out, err = p.communicate()
     return out.decode()
 
