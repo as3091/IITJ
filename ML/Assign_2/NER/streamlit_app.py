@@ -73,8 +73,12 @@ input_string = st.text_area("Enter your string :",
 
 p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
-# print(out.decode())
-st.write("Current Directory:", out.decode())
+pwd = out.decode()
+
+p = Popen(f"ls {pwd}ML/Assign_2/NER/X_tokenizer.pkl", stdout=PIPE, stderr=PIPE,shell =True)
+out, err = p.communicate()
+# pwd = out.decode()
+st.write("X_token:", out.decode())
 if st.button("Get NERs"):
     if input_string:
         df = string_to_dataframe(input_string)
