@@ -51,7 +51,8 @@ def string_to_dataframe(input_string):
     """Converts a string to a pandas DataFrame."""
     try:
         NN_obj = The_Neural_Net()
-
+        num_of_epochs=5
+        NN_obj.load_from_file(num_of_epochs=num_of_epochs)
         # sentence = """Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality"""
         sentence = input_string
         prediction_df = NN_obj.predict(model=NN_obj.model,sentence=sentence)
