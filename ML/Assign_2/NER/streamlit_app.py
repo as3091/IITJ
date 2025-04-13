@@ -11,7 +11,7 @@ from tensorflow.keras.models import load_model
 
 class The_Neural_Net:
     def __init__(self):
-        self.max_len = 17
+        self.max_len = 89
 
 def load_from_file(self,num_of_epochs):
     # self.num_of_epochs = num_of_epochs
