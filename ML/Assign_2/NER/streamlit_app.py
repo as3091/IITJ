@@ -15,15 +15,15 @@ class The_Neural_Net:
 
 def load_from_file(self,num_of_epochs):
     # self.num_of_epochs = num_of_epochs
-    with open('X_tokenizer.pkl', 'rb') as file:
+    with open(f'{pwd}/ML/Assign_2/NER/X_tokenizer.pkl', 'rb') as file:
         self.X_tokenizer = pickle.load(file)
         print("Tokenizer loaded from X_tokenizer.pkl")
 
-    with open('y_tokenizer.pkl', 'rb') as file:
+    with open(f'{pwd}/ML/Assign_2/NER/y_tokenizer.pkl', 'rb') as file:
         self.y_tokenizer = pickle.load(file)
         print("Tokenizer loaded from y_tokenizer.pkl")
 
-    model_save_path = f"ner_model_{num_of_epochs}.keras"
+    model_save_path = f"{pwd}/ML/Assign_2/NER/ner_model_{num_of_epochs}.keras"
     self.model = load_model(model_save_path)
     print(f"Model loaded from {model_save_path}")
 
@@ -74,16 +74,16 @@ input_string = st.text_area("Enter your string :",
 p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 pwd = out.decode().strip()
-st.write(f"pwd {pwd}", out.decode())
+# st.write(f"pwd {pwd}", out.decode())
 
-cmd = f"ls -ltrh {pwd}/ML/Assign_2/NER/*"
-st.write(f"cmd:\t{cmd}")
-p = Popen(cmd, stdout=PIPE, stderr=PIPE,shell =True)
-out, err = p.communicate()
-files = out.decode().split("\n")
-for i in files:
-    if i:
-        st.write(i)
+# cmd = f"ls -ltrh {pwd}/ML/Assign_2/NER/*"
+# st.write(f"cmd:\t{cmd}")
+# p = Popen(cmd, stdout=PIPE, stderr=PIPE,shell =True)
+# out, err = p.communicate()
+# files = out.decode().split("\n")
+# for i in files:
+#     if i:
+#         st.write(i)
 # st.write(f"ls -ltrhR\n\n{pwd}", out.decode())
 
 
