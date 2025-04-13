@@ -80,7 +80,7 @@ st.write("model location:", f"{pwd}/ML/Assign_2/NER/X_tokenizer.pkl")
 p = Popen(f"ls {pwd}/ML/Assign_2/NER/*", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 # pwd = out.decode()
-st.write("X_token:", out.decode())
+st.write(f"ls {pwd}/ML/Assign_2/NER/*: {out.decode()}")
 if st.button("Get NERs"):
     if input_string:
         df = string_to_dataframe(input_string)
