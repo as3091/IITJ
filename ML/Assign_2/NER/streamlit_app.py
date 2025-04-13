@@ -69,17 +69,17 @@ def string_to_dataframe(input_string):
         st.error(f"Error converting string to DataFrame: {e}")
         return None
 
-st.title("String to DataFrame Converter")
+st.title("Named Entity Recognition")
 
 input_string = st.text_area("Enter your string :", 
                            value="Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality", 
                            height=200)  # Example CSV string
 
-if st.button("Convert to DataFrame"):
+if st.button("Get NERs"):
     if input_string:
         df = string_to_dataframe(input_string)
         if df is not None:
-            st.write("DataFrame:")
+            st.write("NER:")
             st.dataframe(df)
     else:
         st.warning("Please enter a string.")
