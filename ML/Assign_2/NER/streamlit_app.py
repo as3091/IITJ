@@ -87,11 +87,11 @@ pwd = out.decode().strip()
 # st.write(f"ls -ltrhR\n\n{pwd}", out.decode())
 
 
-st.write("model location:", f"{pwd}/ML/Assign_2/NER/X_tokenizer.pkl")
-p = Popen(f"ls {pwd}/ML/Assign_2/NER/*", stdout=PIPE, stderr=PIPE,shell =True)
-out, err = p.communicate()
-ls = out.decode()
-st.write(f"ls {pwd}/ML/Assign_2/NER/*: {ls}")
+# st.write("model location:", f"{pwd}/ML/Assign_2/NER/X_tokenizer.pkl")
+# p = Popen(f"ls {pwd}/ML/Assign_2/NER/*", stdout=PIPE, stderr=PIPE,shell =True)
+# out, err = p.communicate()
+# ls = out.decode()
+# st.write(f"ls {pwd}/ML/Assign_2/NER/*: {ls}")
 if st.button("Get NERs"):
     if input_string:
         df = string_to_dataframe(input_string)
