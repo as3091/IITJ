@@ -56,9 +56,7 @@ The_Neural_Net.predict = predict
 def string_to_dataframe(input_string):
 
     # try:
-    NN_obj = The_Neural_Net()
-    num_of_epochs=5
-    NN_obj.load_from_file(num_of_epochs=num_of_epochs)
+
     # sentence = """Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality"""
     sentence = input_string
     prediction_df = NN_obj.predict(model=NN_obj.model,sentence=sentence)
@@ -81,7 +79,11 @@ p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 pwd = out.decode().strip()
 
-df = string_to_dataframe(input_string)
+# df = string_to_dataframe(input_string)
+
+NN_obj = The_Neural_Net()
+num_of_epochs=5
+NN_obj.load_from_file(num_of_epochs=num_of_epochs)
 # if df is not None:
 #     st.write("NER:")
 #     st.dataframe(df)
