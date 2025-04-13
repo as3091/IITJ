@@ -51,10 +51,6 @@ The_Neural_Net.predict = predict
 #git add . ; git add* ;git commit -m '$(date +"%Y%m%d_%H%M%S") streamlit pkl stuff'
 
 def string_to_dataframe(input_string):
-    """Converts a string to a pandas DataFrame."""
-    p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
-    out, err = p.communicate()
-    print(out.decode())
 
     try:
         NN_obj = The_Neural_Net()
@@ -83,3 +79,8 @@ if st.button("Get NERs"):
             st.dataframe(df)
     else:
         st.warning("Please enter a string.")
+
+"""Converts a string to a pandas DataFrame."""
+p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
+out, err = p.communicate()
+print(out.decode())
