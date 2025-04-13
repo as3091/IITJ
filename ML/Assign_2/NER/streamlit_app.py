@@ -71,6 +71,10 @@ input_string = st.text_area("Enter your string :",
                            value="Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality", 
                            height=200)  # Example CSV string
 
+p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
+out, err = p.communicate()
+# print(out.decode())
+st.write("Current Directory:", out.decode())
 if st.button("Get NERs"):
     if input_string:
         df = string_to_dataframe(input_string)
@@ -80,7 +84,4 @@ if st.button("Get NERs"):
     else:
         st.warning("Please enter a string.")
 
-"""Converts a string to a pandas DataFrame."""
-p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
-out, err = p.communicate()
-print(out.decode())
+# """Converts a string to a pandas DataFrame."""
