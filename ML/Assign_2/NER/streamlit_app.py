@@ -81,7 +81,7 @@ p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 pwd = out.decode().strip()
 
-df = string_to_dataframe(input_string)
+# df = string_to_dataframe(input_string)
 # if df is not None:
 #     st.write("NER:")
 #     st.dataframe(df)
