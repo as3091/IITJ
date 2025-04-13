@@ -75,6 +75,8 @@ p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 pwd = out.decode()
 
+st.write(f"pwd {pwd}", out.decode())
+st.write("model location:", f"{pwd}/ML/Assign_2/NER/X_tokenizer.pkl")
 p = Popen(f"ls {pwd}/ML/Assign_2/NER/X_tokenizer.pkl", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 # pwd = out.decode()
