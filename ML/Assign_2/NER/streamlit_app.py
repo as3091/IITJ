@@ -76,7 +76,7 @@ out, err = p.communicate()
 pwd = out.decode()
 st.write(f"pwd {pwd}", out.decode())
 
-p = Popen(f"ls -ltrhR {pwd}/ML/Assign_2/NER/", stdout=PIPE, stderr=PIPE,shell =True)
+p = Popen(f"ls -ltrh {pwd}/ML/Assign_2/NER/*", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 files = out.decode().split("\n")
 for i in files:
