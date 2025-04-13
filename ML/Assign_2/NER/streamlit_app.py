@@ -82,7 +82,7 @@ pwd = out.decode().strip()
 # df = string_to_dataframe(input_string)
 
 NN_obj = The_Neural_Net()
-num_of_epochs=5
+num_of_epochs=50
 NN_obj.load_from_file(num_of_epochs=num_of_epochs)
 # if df is not None:
 #     st.write("NER:")
