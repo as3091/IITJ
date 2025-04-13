@@ -71,15 +71,19 @@ input_string = st.text_area("Enter your string :",
                            value="Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality", 
                            height=200)  # Example CSV string
 
-p = Popen("ls -ltrhR", stdout=PIPE, stderr=PIPE,shell =True)
-out, err = p.communicate()
-pwd = out.decode()
-st.write(f"ls -ltrhR\n\n{pwd}", out.decode())
-
 p = Popen("pwd", stdout=PIPE, stderr=PIPE,shell =True)
 out, err = p.communicate()
 pwd = out.decode()
 st.write(f"pwd {pwd}", out.decode())
+
+p = Popen(f"ls -ltrhR {pwd}/ML/Assign_2/NER/", stdout=PIPE, stderr=PIPE,shell =True)
+out, err = p.communicate()
+files = out.decode().split("\n")
+for i in files:
+    if i:
+        st.write(i)
+# st.write(f"ls -ltrhR\n\n{pwd}", out.decode())
+
 
 st.write("model location:", f"{pwd}/ML/Assign_2/NER/X_tokenizer.pkl")
 p = Popen(f"ls {pwd}/ML/Assign_2/NER/*", stdout=PIPE, stderr=PIPE,shell =True)
