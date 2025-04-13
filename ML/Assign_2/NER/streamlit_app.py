@@ -55,21 +55,21 @@ The_Neural_Net.predict = predict
 
 def string_to_dataframe(input_string):
 
-    try:
-        NN_obj = The_Neural_Net()
-        num_of_epochs=5
-        NN_obj.load_from_file(num_of_epochs=num_of_epochs)
-        # sentence = """Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality"""
-        sentence = input_string
-        prediction_df = NN_obj.predict(model=NN_obj.model,sentence=sentence)
-        st.write("Prediction DataFrame:")
-        st.write(prediction_df)
-        st.dataframe(prediction_df)
-        return prediction_df
+    # try:
+    NN_obj = The_Neural_Net()
+    num_of_epochs=5
+    NN_obj.load_from_file(num_of_epochs=num_of_epochs)
+    # sentence = """Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality"""
+    sentence = input_string
+    prediction_df = NN_obj.predict(model=NN_obj.model,sentence=sentence)
+    st.write("Prediction DataFrame:")
+    st.write(prediction_df)
+    st.dataframe(prediction_df)
+    return prediction_df
 
-    except Exception as e:
-        st.error(f"Error converting string to DataFrame: {e}")
-        return None
+    # except Exception as e:
+    #     st.error(f"Error converting string to DataFrame: {e}")
+    #     return None
 
 st.title("Named Entity Recognition")
 
