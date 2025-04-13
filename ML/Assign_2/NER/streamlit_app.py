@@ -47,6 +47,8 @@ def predict(self,model,sentence):
         final_pred["Word"].append(Word)
         final_pred["Tag"].append(Tag)
     print(final_pred)
+    st.write("final_pred:")
+    st.write(final_pred)
     return pd.DataFrame(final_pred)
 The_Neural_Net.predict = predict
 #git add . ; git add* ;git commit -m '$(date +"%Y%m%d_%H%M%S") streamlit pkl stuff'
