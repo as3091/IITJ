@@ -2,10 +2,12 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import io
+from subprocess import Popen, PIPE
 
 import tensorflow as tf
 # from IPython.display import display, HTML
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import load_model
 
 class The_Neural_Net:
     def __init__(self):
@@ -49,6 +51,9 @@ The_Neural_Net.predict = predict
 
 def string_to_dataframe(input_string):
     """Converts a string to a pandas DataFrame."""
+    p = Popen("ls -ltrh", stdout=PIPE, stderr=PIPE)
+    out, err = p.communicate()
+    print(out.decode())
     try:
         NN_obj = The_Neural_Net()
         num_of_epochs=5
