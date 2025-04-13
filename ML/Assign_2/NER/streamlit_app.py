@@ -82,9 +82,9 @@ out, err = p.communicate()
 pwd = out.decode().strip()
 
 df = string_to_dataframe(input_string)
-if df is not None:
-    st.write("NER:")
-    st.dataframe(df)
+# if df is not None:
+#     st.write("NER:")
+#     st.dataframe(df)
 
 
 # st.write(f"pwd {pwd}", out.decode())
