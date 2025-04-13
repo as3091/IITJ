@@ -46,9 +46,9 @@ def predict(self,model,sentence):
         # final_pred[tokens_to_words[i]] = NER_tags[i]
         final_pred["Word"].append(Word)
         final_pred["Tag"].append(Tag)
-    print(final_pred)
-    st.write("final_pred:")
-    st.write(final_pred)
+    # print(final_pred)
+    # st.write("final_pred:")
+    # st.write(final_pred)
     return pd.DataFrame(final_pred)
 The_Neural_Net.predict = predict
 #git add . ; git add* ;git commit -m '$(date +"%Y%m%d_%H%M%S") streamlit pkl stuff'
@@ -62,9 +62,9 @@ def string_to_dataframe(input_string):
     # sentence = """Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality"""
     sentence = input_string
     prediction_df = NN_obj.predict(model=NN_obj.model,sentence=sentence)
-    st.write("Prediction DataFrame:")
-    st.write(prediction_df)
-    st.dataframe(prediction_df)
+    # st.write("Prediction DataFrame:")
+    # st.write(prediction_df)
+    # st.dataframe(prediction_df)
     return prediction_df
 
     # except Exception as e:
