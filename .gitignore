@@ -3,16 +3,16 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-AI/AI_Assign_1/cache
-AI/AI_Assign_1/Q2/india-master
-AI/AI_Assign_1/Q2/shapefiles-master
-AI/AI_Assign_1/Q2/*.csv
-AI/AI_Assign_1/Q2/*.zip
-AI/AI_Assign_1/india-master
-AI/AI_Assign_1/shapefiles-master
+Trim_1/AI/AI_Assign_1/cache
+Trim_1/AI/AI_Assign_1/Q2/india-master
+Trim_1/AI/AI_Assign_1/Q2/shapefiles-master
+Trim_1/AI/AI_Assign_1/Q2/*.csv
+Trim_1/AI/AI_Assign_1/Q2/*.zip
+Trim_1/AI/AI_Assign_1/india-master
+Trim_1/AI/AI_Assign_1/shapefiles-master
 
-ML/Assign_1/*.csv
-ML/Assign_2/*.csv
+Trim_1/ML/Assign_1/*.csv
+Trim_1/ML/Assign_2/*.csv
 # User-specific files
 *.rsuser
 *.suo
